@@ -1,0 +1,94 @@
+/* 전체적인 세팅부터 */
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    /* 자기가 속한 영역을 기준으로 백분율 계산 */
+    /* html이 속한 화면은 웹 브라우저 화면 */
+    /* 즉, 100% = 화면을 꽉 채우겠다 */
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    /* 0px을 쓸 때는 단위를 생략해도 괜찮음 */
+}
+
+.container{
+    height: 100%;
+    background-color: #9ebd60;
+}
+
+/* 스크린 크기 조정 */
+.chat-screen{
+    height: calc(100% - 120px);
+    overflow: auto;
+    /* css 수치끼리 계산 */
+}
+
+/* 유저 정보 표시되는 부분 */
+.user{
+    background-color: #FFFFFF;
+    padding: 16px;
+    height: 80px;
+}
+
+.user__pic{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #9ebd60;
+}
+
+.user__column{
+    float: left;
+}
+
+.user__nick, .user__count{
+    margin: 5px;
+}
+
+.user__count{
+    font-size: 12px;
+    color: gray;
+}
+
+/* 채팅 입력창 */
+.char-form{
+    height: 120px;
+    background-color: #FFFFFF;
+}
+
+.chat-form__field{
+    height: 120px;
+}
+.chat-form__msg{
+    float: left;
+    width: calc(100% - 120px);
+    height: 120px;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    resize: none; /* textarea의 리사이징이 안됨 */
+}
+
+.chat-form__bt{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    background-color: #9ebd60;
+    font-size: 18px;
+}
+
+.chat-form__bt:active{
+    background-color: #718a3e;
+    /* 버튼 클릭 시 색상 변화 */
+}
+
+.chat-form__msg:focus{
+    outline: none;
+    /* textarea의 클릭 시 외곽선 제거 */
+}
